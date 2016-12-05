@@ -1,0 +1,470 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>		
+	
+	    <meta charset="utf-8"/>
+	    <meta name="theme-color" content="#3893ca" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	    <meta name="description" content="Home AGNC Church" />
+	    <meta name="author" content="Carthy Marie joseph" />
+	    <title th:text="#{index.title.home}"> </title>
+	    
+	    
+		
+		<!-- CSS -->
+		<link href="css/bootstrap.min.css" th:href="@{css/bootstrap.min.css}" rel="stylesheet"/>
+		<!--  <link href="css/font-awesome.min.css" rel="stylesheet"/>-->
+		<link href="css/prettyPhoto.css" th:href="@{css/prettyPhoto.css}" rel="stylesheet" />
+		<link href="css/animate.css" th:href="@{css/animate.css}" rel="stylesheet" />
+		<link href="css/main.css" th:href="@{css/main.css}" rel="stylesheet" />
+		<!--[if lt IE 9]>
+		    <script src="js/html5shiv.js" /></script>
+		    <script src="js/respond.min.js" /></script>
+	    <![endif]-->
+	    <link rel="shortcut icon" href="images/ico/favicon.ico" />
+	    
+	    <link rel="apple-touch-icon-precomposed" sizes="144x144"  href="images/ico/apple-touch-icon-144-precomposed.png" th:href="@{images/ico/apple-touch-icon-144-precomposed.png}" />
+	    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png" th:href="@{images/ico/apple-touch-icon-114-precomposed.png}" />
+	    <link rel="apple-touch-icon-precomposed" sizes="72x72"  href="images/ico/apple-touch-icon-72-precomposed.png"  th:href="@{images/ico/apple-touch-icon-72-precomposed.png}" />
+	    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png" />
+		
+		
+	</head>
+	<body>
+		<header class="navbar navbar-inverse navbar-fixed-top wet-asphalt" role="banner">
+		        <div class="container">
+		            <div class="navbar-header">
+		                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+		                    <span class="sr-only" th:text="#{nav.toggle.navigation}"></span>
+		                    <span class="icon-bar"></span>
+		                    <span class="icon-bar"></span>
+		                    <span class="icon-bar"></span>
+		                </button>
+		                <a class="navbar-brand" href="/"><img src="images/logo.png" alt="logo"/></a>
+		            </div>
+		            <div class="navbar-collapse collapse" style="height: 0px;">
+		                <ul class="nav navbar-nav navbar-right">
+		                    <li><a href="/" th:text="#{nav.home}"></a></li>
+		                    <li><a href="#" th:text="#{nav.about.us}"> </a></li>
+		                 
+		                   
+		                    <li class="dropdown">
+		                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" th:text="#{nav.church}"> <i class="icon-angle-down"></i></a>
+		                        <ul class="dropdown-menu">
+		                            <li style="text-align: center;"><a href="#" th:text="#{nav.word}">  </a></li>
+		                            <li style="text-align: center;"><a href="${contextPath}/church/news" th:text="#{nav.news}"> </a></li>
+		                            <li style="text-align: center;"><a href="#" th:text="#{nav.event}"> </a></li>
+		
+									
+		                            	<li th:if="${agregation}" style="text-align: center;"><a href="#" th:text="#{nav.music}">  </a></li>
+		                           
+		
+		                            <li style="text-align: center;"><a href="#" th:text="#{nav.contact}"> </a></li> 
+		                        </ul>
+		                    </li>
+		           
+		                    <li class="dropdown">
+		                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" th:text="#{nav.language}"> <i class="icon-angle-down"></i></a>
+		                        <ul class="dropdown-menu">
+		                            <li style="text-align: center;">
+					                    <a href="?lang=en" >
+					                    	<img alt="unitedkingdom" src="images/language/unitedkingdom.png" />
+					                    </a>
+		                    		</li>
+		                            <li style="text-align: center;">
+					                    <a href="?lang=in">
+					                    	<img alt="india" src="images/language/india.png" />
+					                    </a>
+			               			</li>
+		                            <li style="text-align: center;">
+					                   	<a href="?lang=fr">
+					                    	<img alt="france" src="images/language/france.png" />
+					                    </a>
+			               			</li>
+		                        </ul>
+		                    </li>
+		
+		
+							
+								
+							<li th:if="${agregation}" style="text-align: left;">
+			                   	<a href="#">
+			                    	<img alt="edit" src="images/navicon/edit.png" />
+			                    </a>
+			                </li>
+							
+		
+		
+		
+			               	<li style="text-align: right;">
+			                   	<a href="login">
+			                    	<img alt="login" src="images/navicon/login.png" />
+			                    </a>
+			                </li>
+		                </ul>
+		            </div>
+		        </div>
+		    </header>
+				<!-- END HEADER -->
+		
+		
+		<section id="main-slider" class="no-margin">
+        <div class="carousel slide wet-asphalt">
+            <ol class="carousel-indicators">
+                <li data-target="#main-slider" data-slide-to="0" class="active"></li>
+                <li data-target="#main-slider" data-slide-to="1"></li>
+                <li data-target="#main-slider" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="item active" style="background-image: url(images/carousel/${first}.jpg)">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="carousel-content center centered" style="margin-top: 189.5px;">
+                                    <h2 class="boxed animation animated-item-1">Titre</h2>
+                                    
+                                    <p class="boxed animation animated-item-2">Description.</p>
+                                    <br/>
+                                    <a  th:text="#{index.learn.more}" class="btn btn-md animation animated-item-3" href="#" style="background-color: rgba(0, 0, 0, 0.5);"> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--/.item-->
+                <div class="item" style="background-image: url(images/carousel/${second}.jpg)">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="carousel-content center centered" style="margin-top: 189.5px;">
+                                    <h2 class="boxed animation animated-item-1">Titre</h2>
+                                    
+                                    <p class="boxed animation animated-item-2">Description.</p>
+                                    <br/>
+                                    <a th:text="#{index.learn.more}"  class="btn btn-md animation animated-item-3" href="#" style="background-color: rgba(0, 0, 0, 0.5);"> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--/.item-->
+                <div class="item" style="background-image: url(images/carousel/${thred}.jpg)">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="carousel-content center centered" style="margin-top: 189.5px;">
+                                    <h2 class="boxed animation animated-item-1">Titre</h2>
+                                   
+                                    
+                                    <br/>
+                                    <a th:text="#{index.learn.more}" class="btn btn-md animation animated-item-3" href="#" style="background-color: rgba(0, 0, 0, 0.5);"> </a>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 hidden-xs animation animated-item-4">
+                                <div class="centered" style="margin-top: 300px;">
+                                    <div class="embed-container">
+                                        <iframe src="https://www.youtube.com/embed/aUxOy5eI2n8" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--/.item-->
+            </div><!--/.carousel-inner-->
+        </div><!--/.carousel-->
+        <a class="prev " href="#main-slider" data-slide="prev">
+            <i class="icon-angle-left"></i>
+        </a>
+        <a class="next " href="#main-slider" data-slide="next">
+            <i class="icon-angle-right"></i>
+        </a>
+    </section>
+    
+    <section id="services" style="background-color: #3893ca; color: white;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <h4 th:text="#{index.verse.of.year}"> </h4>
+                	
+					<p id="verset"> Je bâtirai mon Eglise et les portes du séjour des morts 
+					 ne prévaudront pas contre elle. 
+					<br/>
+					<span class="matthieu"> Matthieu 16:18  </span> </p>
+					<br/>
+                </div><!--/.col-md-4-->
+                <div class="col-md-6 col-sm-12">
+                    <h4  th:text="#{index.verse.of.the.month}">  
+                    &nbsp;  
+                    </h4>
+                	
+					<p>
+						${versemonth}
+						<br/>
+						<span>${sourceversemonth}</span>
+					 </p>
+                </div><!--/.col-md-4-->
+            </div>
+        </div>
+    </section>
+    
+    <section id="recent-works">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h3 th:text="#{nav.word}"> </h3>
+                    <div class="btn-group">
+                        <a class="btn btn-success" href="#scroller" data-slide="prev"><i class="icon-angle-left"></i></a>
+                        <a class="btn btn-success" href="#scroller" data-slide="next"><i class="icon-angle-right"></i></a>
+                    </div>
+                    <p class="gap"></p>
+                </div>
+                <div class="col-md-9">
+                    <div id="scroller" class="carousel slide">
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <div class="row">
+                                    <div class="col-xs-4">
+                                        
+                                            <div class="item-inner">
+	                                            <a href="#">
+	                                                <img class="img-responsive" src="images/portfolio/recent/item1.png" alt="" />
+	                                                
+	                                                <h5>
+	                                                    Titre - Description
+	                                                </h5>
+	                                                <div class="tags">
+	                               						 <i class="icon-tags"></i> Tags 
+	                               						 <a class="btn btn-xs btn-primary" href="#">CSS3</a> 
+
+                            						</div>
+												</a>
+                                            </div>
+                                       
+                                    </div>                            
+                            
+
+                                </div><!--/.row-->
+                            </div><!--/.item-->
+                            <div class="item">
+                                <div class="row">
+                                    <div class="col-xs-4">
+                                        
+                                         	<div class="item-inner">
+	                                            <a href="#">
+	                                                <img class="img-responsive" src="images/portfolio/recent/item1.png" alt=""/>
+	                                                
+	                                                <h5>
+	                                                    Titre - Description
+	                                                </h5>
+	                                                <div class="tags">
+	                               						 <i class="icon-tags"></i> Tags 
+	                               						 <a class="btn btn-xs btn-primary" href="#">CSS3</a> 
+
+                            						</div>
+												</a>
+                                            </div>
+                                        
+                                    </div>                            
+
+                                </div>
+                            </div><!--/.item-->
+                        </div>
+                    </div>
+                </div>
+            </div><!--/.row-->
+        </div>
+    </section> --%>
+    
+    
+    
+       
+    <section style="background-color: #c9ced2;" >
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h3 th:text="#{nav.news}"> </h3>
+                    <div class="btn-group">
+                        <a class="btn btn-success" href="#scroller2" data-slide="prev"><i class="icon-angle-left"></i></a>
+                        <a class="btn btn-success" href="#scroller2" data-slide="next"><i class="icon-angle-right"></i></a>
+                    </div>
+                    <p class="gap"></p>
+                </div>
+                <div class="col-md-9">
+                    <div id="scroller2" class="carousel slide">
+                        <div class="carousel-inner">
+                        	
+                        	<div class="item active">
+                        		<div class="row">
+                            	
+                            		
+	                                <div th:each="news: ${listnews}" th:if="${news.index} &ge; 0 and ${news.index} &le; 2" >   
+	                                    <div class="col-xs-4">
+	                                        
+	                                            <div class="item-inner" style="text-align: center; background-color: #808b8d; padding-left: 0.2%;">
+		                                            <a th:href="${contextPath}/church/news/${news.textId}">
+		                                                <img class="img-responsive" th:src="images/imagesmall/${news.categoryTheme.imgTheme}.jpg" alt="Image Theme" />
+		                                                
+		                                                <h5>
+		                                                    ${news.getTitle()}
+		                                                </h5>
+		                                                <div class="tags" style="padding-bottom: 5px;">
+		                               						 <i class="icon-tags"></i>  
+		                               						 <a class="btn btn-xs btn-primary" href="#">${news.categoryTheme.toString()}</a>
+	                            						</div>
+	                            						
+													</a>
+	                                            </div>
+	                                       
+	                                    </div>  
+	                                </div>  
+                                
+                                     
+                                                                
+                                </div><!--/.row-->
+                            </div><!--/.item-->
+                            
+                           <div class="item">
+                        		<div class="row">
+                            	
+                            		 
+                            		<div th:each="news: ${listnews}" th:if="${news.index} &ge; 3 and ${news.index} &le; 5" > 
+	                                    
+	                                    <div class="col-xs-4">
+	                                        
+	                                            <div class="item-inner" style="text-align: center; background-color: #808b8d;  padding-left: 0.2%;">
+		                                            <a th:href="${contextPath}/church/news/${news.textId}">
+		                                                <img class="img-responsive" th:src="images/imagesmall/${news.categoryTheme.imgTheme}.jpg" alt="Image Theme" />
+		                                                
+		                                                <h5>
+		                                                    ${news.getTitle()}
+		                                                </h5>
+		                                                <div class="tags" style="padding-bottom: 5px;">
+		                               						 <i class="icon-tags"></i>  
+		                               						 <a class="btn btn-xs btn-primary" href="#">${news.categoryTheme.toString()}</a> 
+	
+	                            						</div>
+	                            						&nbsp;
+													</a>
+	                                            </div>
+	                                       
+	                                    </div>  
+	                                    
+                                    </div>
+                                    
+                                                                
+                                </div><!--/.row-->
+                            </div><!--/.item-->
+                          
+                            <div class="item">
+                        		<div class="row">
+                            	
+                            		 
+                            		<div th:each="news: ${listnews}" th:if="${news.index} &ge; 6 and ${news.index} &le; 3" > 
+	                                    
+	                                    <div class="col-xs-4">
+	                                        
+	                                            <div class="item-inner" style="text-align: center; background-color: #808b8d;  padding-left: 0.2%;">
+		                                            <a th:href="${contextPath}/church/news/${news.textId}">
+		                                                <img class="img-responsive" th:src="images/imagesmall/${news.categoryTheme.imgTheme}.jpg" alt="Image Theme" />
+		                                                
+		                                                <h5>
+		                                                    ${news.getTitle()}
+		                                                </h5>
+		                                                <div class="tags" style="padding-bottom: 5px;">
+		                               						 <i class="icon-tags"></i>  
+		                               						 <a class="btn btn-xs btn-primary" href="#">${news.categoryTheme.toString()}</a> 
+	
+	                            						</div>
+	                            						&nbsp;
+													</a>
+	                                            </div>
+	                                       
+	                                    </div>  
+	                                    
+                                    </div>
+                                    
+                                                                
+                                </div><!--/.row-->
+                            </div><!--/.item-->
+                            
+                        </div>
+                    </div>
+                </div>
+            </div><!--/.row-->
+        </div>
+    </section>
+		
+		<!-- FOOTER -->
+		
+		<section id="bottom" class="wet-asphalt">
+        <div class="container">
+            <div class="row">
+
+
+                <div class="col-md-6 col-sm-6">
+                    <h4 th:text="#{last.news}"> </h4>
+                    <div>
+	                    <!--  <c:forEach items="${freshs}" var="fresh" begin="0" end="2">
+	                        <div class="media">
+	                            <div class="pull-left">
+	                                <img src="<c:url value="/resources/userresource/images/imagextrasmall/${fresh.categoryTheme.imgTheme}.jpg" />" alt="">              
+	                            </div>
+	                            <div class="media-body">
+	                                <span class="media-heading"><a href="${contextPath}/church/news/${fresh.textId}">${fresh.title}</a></span>
+	                                <small class="muted"><fmt:formatDate value="${fresh.date}" pattern="dd MMMM yyyy HH:mm" /></small>
+	                            </div>
+	                        </div>
+						</c:forEach>-->
+                    </div>  
+                </div><!--/.col-md-3-->
+
+                <div class="col-md-6 col-sm-6">
+                    <h4>Address</h4>
+                    <address>
+                        <strong>AGNC Church.</strong><br/>
+                        <span th:text="#{address}"></span><br/>
+                        <span th:text="#{city}"></span>, <span th:text="#{country}"></span><br/> 
+                        <abbr title="Phone">P:</abbr> (123) 456-7890
+                    </address>
+                    <h4>Newsletter</h4>
+                    <form role="form">
+                        <div class="input-group">
+                            <input type="text" class="form-control" autocomplete="off" placeholder="Enter your email" />
+                            <span class="input-group-btn">
+                                <button class="btn btn-danger" type="button">Go!</button>
+                            </span>
+                        </div>
+                    </form>
+                    <br/>
+
+	                </div> <!--/.col-md-3-->
+	            </div>
+	        </div>
+	    </section><!--/#bottom-->
+
+		<footer id="footer" class="midnight-blue">
+		        <div class="container">
+		            <div class="row">
+		                <div class="col-sm-6">
+		                    &copy; 2016 <a target="_blank" href="" >AGNC Church</a>. All Rights Reserved.
+		                </div>
+		                <div class="col-sm-6">
+		                   <div class="input-group">
+		                            <input type="text" class="form-control" autocomplete="off" placeholder="Search" />
+		                            <span class="input-group-btn">
+		                                <button class="btn btn-primary" type="button"><i class="icon-search"></i></button>
+		                            </span>
+		                        </div>
+		                </div>
+		            </div>
+		        </div>
+		    </footer><!--/#footer-->
+	  
+	    <script src="js/jquery.js"></script>
+	    
+	    <script src="js/bootstrap.min.js"></script>
+	    
+	    <script src="js/jquery.prettyPhoto.js"></script>
+	    
+	    <script src="js/main.js"></script>
+	</body>
+</html>

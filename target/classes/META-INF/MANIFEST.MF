@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: church_boot
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: Carthy
+Implementation-Vendor-Id: com.agnc.carthy
+Build-Jdk: 1.8.0_101
+Implementation-URL: http://projects.spring.io/spring-boot/church_boot/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+
